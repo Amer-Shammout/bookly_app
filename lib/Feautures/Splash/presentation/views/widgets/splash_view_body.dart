@@ -15,6 +15,16 @@ class SplashViewBody extends StatelessWidget {
             width: MediaQuery.sizeOf(context).width * .7,
           ),
         ),
+        const SizedBox(
+          height: 12,
+        ),
+        const Text(
+          'Read Free Books',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            letterSpacing: 4,
+          ),
+        )
       ],
     );
   }
