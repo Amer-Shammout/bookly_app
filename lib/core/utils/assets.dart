@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/Logo.png
   static const String imagesLogo = "assets/images/Logo.png";
 
+  /// Assets for imagesLogoAppBar
+  /// assets/images/logo_app_bar.svg
+  static const String imagesLogoAppBar = "assets/images/logo_app_bar.svg";
+
   /// Assets for imagesPlay
   /// assets/images/Play.svg
   static const String imagesPlay = "assets/images/Play.svg";
