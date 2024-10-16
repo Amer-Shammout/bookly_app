@@ -7,24 +7,21 @@ class FeaturedListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .27,
-      child: AspectRatio(
-        aspectRatio: 134 / 210,
-        child: Container(
-          padding: const EdgeInsets.only(right: 10, bottom: 10),
-          alignment: Alignment.bottomRight,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            image: const DecorationImage(
-              image: AssetImage(
-                Assets.imagesHarryPotterAndTheChamberOfSecrets6,
-              ),
-              fit: BoxFit.fill,
+    return AspectRatio(
+      aspectRatio: 134 / 210,
+      child: Container(
+        padding: const EdgeInsets.only(right: 10, bottom: 10),
+        alignment: Alignment.bottomRight,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(14),
+          image: const DecorationImage(
+            image: AssetImage(
+              Assets.imagesHarryPotterAndTheChamberOfSecrets6,
             ),
+            fit: BoxFit.fill,
           ),
-          child: const PlayButton(),
         ),
+        child: const PlayButton(),
       ),
     );
   }
