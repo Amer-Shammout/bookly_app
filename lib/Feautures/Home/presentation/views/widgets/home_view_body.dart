@@ -1,7 +1,7 @@
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookly_app/Feautures/Home/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -10,7 +10,6 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-     
         CustomAppBar(
           leadingIcon: Assets.imagesLogoAppBar,
           trailingIcon: Assets.imagesSearch,
@@ -19,10 +18,21 @@ class HomeViewBody extends StatelessWidget {
           leadingOnPressed: () {},
           trailingOnPressed: () {},
         ),
+        const SizedBox(
+          height: 20,
+        ),
+        const FeaturedListViewItem(),
+        const SizedBox(
+          height: 20,
+        ),
       ],
     );
   }
 }
+
+
+
+
 
 
 

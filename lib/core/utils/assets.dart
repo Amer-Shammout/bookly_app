@@ -10,6 +10,10 @@ class Assets {
   /// assets/images/close.svg
   static const String imagesClose = "assets/images/close.svg";
 
+  /// Assets for imagesHarryPotterAndTheChamberOfSecrets6
+  /// assets/images/harry-potter-and-the-chamber-of-secrets-6.png
+  static const String imagesHarryPotterAndTheChamberOfSecrets6 = "assets/images/harry-potter-and-the-chamber-of-secrets-6.png";
+
   /// Assets for imagesLogo
   /// assets/images/Logo.png
   static const String imagesLogo = "assets/images/Logo.png";
@@ -29,5 +33,9 @@ class Assets {
   /// Assets for imagesStar
   /// assets/images/Star.svg
   static const String imagesStar = "assets/images/Star.svg";
+
+  /// Assets for imagesTestBook1
+  /// assets/images/test_book1.png
+  static const String imagesTestBook1 = "assets/images/test_book1.png";
 }
 
