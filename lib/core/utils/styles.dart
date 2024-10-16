@@ -13,21 +13,32 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleRegular14 = TextStyle(
-    fontFamily: kMontserrat,
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    color: Colors.white.withOpacity(.5),
-  );
+  static TextStyle styleRegular14(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 14),
+      fontWeight: FontWeight.w400,
+      color: Colors.white.withOpacity(.5),
+    );
+  }
+
   static const TextStyle styleSemiBold18 = TextStyle(
     fontFamily: kMontserrat,
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
   static TextStyle styleBold20(context) {
-    return  TextStyle(
+    return TextStyle(
       fontFamily: kMontserrat,
       fontSize: getResponsiveFontSize(context, baseFontSize: 20),
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold15(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 15),
       fontWeight: FontWeight.w700,
     );
   }
@@ -50,11 +61,14 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     color: Colors.white.withOpacity(.7),
   );
-  static const TextStyle styleMedium16 = TextStyle(
-    fontFamily: kMontserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-  );
+  static TextStyle styleMedium16(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle styleMedium14(context) {
     return TextStyle(
       fontFamily: kMontserrat,

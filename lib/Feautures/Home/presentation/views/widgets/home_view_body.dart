@@ -1,4 +1,4 @@
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/best_seller_list_view_item.dart';
+import 'package:bookly_app/Feautures/Home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/featured_books_list_view.dart';
 import 'package:bookly_app/constants.dart';
@@ -12,7 +12,6 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomAppBar(
           leadingIcon: Assets.imagesLogoAppBar,
@@ -22,63 +21,44 @@ class HomeViewBody extends StatelessWidget {
           leadingOnPressed: () {},
           trailingOnPressed: () {},
         ),
-        const SizedBox(
-          height: 20,
-        ),
-        const FeaturedBooksListView(),
-        const SizedBox(
-          height: 50,
-        ),
-        const Padding(
-          padding: EdgeInsets.only(left: kHorizontalPadding),
-          child: Text(
-            'Best Seller',
-            style: AppStyles.styleSemiBold18,
+        // const SizedBox(
+        //   height: 20,
+        // ),
+        const Expanded(
+           
+          child: CustomScrollView(
+            
+            slivers: [
+              SliverToBoxAdapter(
+                child: const SizedBox(
+                          height: 40,
+                        ),
+              ),
+              SliverToBoxAdapter(child: FeaturedBooksListView()),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 50,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.only(left: kHorizontalPadding),
+                  child: Text(
+                    'Best Seller',
+                    style: AppStyles.styleSemiBold18,
+                  ),
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 20,
+                ),
+              ),
+              BestSellerListView(),
+            ],
           ),
         ),
-        const SizedBox(
-          height: 20,
-        ),
-        const BestSellerListViewItem(),
       ],
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// class CustomAppBarItem extends StatelessWidget {
-//   const CustomAppBarItem({
-//     super.key,
-//     required this.onPressed,
-//     required this.icon,
-//     required this.iconWidth,
-//     required this.iconHeight,
-//   });
-
-//   final VoidCallback onPressed;
-//   final String icon;
-//   final double? iconWidth;
-//   final double? iconHeight;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return IconButton(
-//       onPressed: onPressed,
-//       icon: SvgPicture.asset(
-//         icon,
-//         width: iconWidth,
-//         height: iconHeight,
-//       ),
-//     );
-//   }
-// }

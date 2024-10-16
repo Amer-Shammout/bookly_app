@@ -16,8 +16,7 @@ class BookPrice extends StatelessWidget {
         ),
         Text(
           "€",
-          style: AppStyles.styleBold20(context)
-              .copyWith(fontSize: 15),
+          style: AppStyles.styleBold15(context),
         ),
       ],
     );

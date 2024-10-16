@@ -9,8 +9,11 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: kHorizontalPadding,
+      padding: EdgeInsets.only(
+        left: kHorizontalPadding,
+        right: kHorizontalPadding,
+        bottom: 20
+
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

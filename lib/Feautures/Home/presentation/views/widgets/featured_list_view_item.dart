@@ -14,9 +14,9 @@ class FeaturedListViewItem extends StatelessWidget {
         alignment: Alignment.bottomRight,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14),
-          image: const DecorationImage(
+          image:  const DecorationImage(
             image: AssetImage(
-              Assets.imagesHarryPotterAndTheChamberOfSecrets6,
+              Assets.imagesBook1High,
             ),
             fit: BoxFit.fill,
           ),

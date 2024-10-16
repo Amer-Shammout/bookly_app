@@ -12,20 +12,20 @@ class BookRating extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(Assets.imagesStar),
+        SvgPicture.asset(Assets.imagesStar,width: getResponsiveFontSize(context, baseFontSize: 12),height: getResponsiveFontSize(context, baseFontSize: 12),),
         const SizedBox(
           width: 5,
         ),
-        const Text(
+        Text(
           '4.8',
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
           width: 5,
         ),
         Text(
           '(2390)',
-          style: AppStyles.styleRegular14,
+          style: AppStyles.styleRegular14(context),
         )
       ],
     );
