@@ -1,11 +1,7 @@
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_cover.dart';
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_details.dart';
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/books_action.dart';
+import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_details_section.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/suggestions_list_view.dart';
-import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/Feautures/Home/presentation/views/widgets/suggestions_section.dart';
 import 'package:bookly_app/core/utils/assets.dart';
-import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -26,44 +22,13 @@ class BookDetailsViewBody extends StatelessWidget {
         ),
         Expanded(
           child: ListView(
-            children: [
+            children: const [
+              BookDetails.BookDetailsSection(),
               SizedBox(
-                height: MediaQuery.sizeOf(context).height * .3,
-                child: const Center(
-                  child: BookCover(
-                    radius: 20,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 45,
-              ),
-              const BookDetails(),
-              const SizedBox(
-                height: 35,
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: kHorizontalPadding,
-                ),
-                child: BooksAction(),
-              ),
-              const SizedBox(
                 height: 50,
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-                child: Text(
-                  'You can also like',
-                  style: AppStyles.styleSemiBold18(context).copyWith(fontSize: 16),
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const SuggestionsListView(),
-              const SizedBox(
+              SuggestionsSection(),
+              SizedBox(
                 height: 40,
               ),
             ],
@@ -73,3 +38,4 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
+
