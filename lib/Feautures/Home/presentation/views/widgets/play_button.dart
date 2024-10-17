@@ -20,7 +20,7 @@ class PlayButton extends StatelessWidget {
         ],
       ),
       child: CircleAvatar(
-        backgroundColor: Colors.white.withOpacity(.1),
+        backgroundColor: Colors.white.withOpacity(.44),
         radius: getResponsiveFontSize(context, baseFontSize: 20),
         child: IconButton(
           icon: const Icon(

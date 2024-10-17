@@ -7,12 +7,12 @@ class BooksAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Expanded(
           child: CustomButton(
             backgroundColor: Colors.white,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(
                 15,
               ),
@@ -21,15 +21,15 @@ class BooksAction extends StatelessWidget {
               ),
             ),
             text: '19.99 €',
-            textStyle: AppStyles.styleBold18,
+            textStyle: AppStyles.styleBold18(context),
           ),
         ),
         Expanded(
           child: CustomButton(
-            backgroundColor: Color(
+            backgroundColor: const Color(
               0xffEF8262,
             ),
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topRight: Radius.circular(
                 15,
               ),
@@ -38,7 +38,7 @@ class BooksAction extends StatelessWidget {
               ),
             ),
             text: 'Free Preview',
-            textStyle: AppStyles.styleBold16,
+            textStyle: AppStyles.styleBold16(context),
           ),
         )
       ],

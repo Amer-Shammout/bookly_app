@@ -56,7 +56,7 @@ class BookDetailsViewBody extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
                 child: Text(
                   'You can also like',
-                  style: AppStyles.styleSemiBold18.copyWith(fontSize: 16),
+                  style: AppStyles.styleSemiBold18(context).copyWith(fontSize: 16),
                 ),
               ),
               const SizedBox(

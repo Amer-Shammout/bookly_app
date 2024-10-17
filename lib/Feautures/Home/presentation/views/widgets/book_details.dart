@@ -9,9 +9,9 @@ class BookDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           'The Jungle Book',
-          style: AppStyles.styleRegular30,
+          style: AppStyles.styleRegular30(context),
           textAlign: TextAlign.center,
         ),
         const SizedBox(
@@ -19,7 +19,7 @@ class BookDetails extends StatelessWidget {
         ),
         Text(
           'Rudyard Kipling',
-          style: AppStyles.styleMedium18,
+          style: AppStyles.styleMedium18(context),
           textAlign: TextAlign.center,
         ),
         const SizedBox(

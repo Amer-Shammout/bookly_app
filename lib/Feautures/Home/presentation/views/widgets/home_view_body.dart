@@ -24,36 +24,36 @@ class HomeViewBody extends StatelessWidget {
         // const SizedBox(
         //   height: 20,
         // ),
-        const Expanded(
+        Expanded(
           child: CustomScrollView(
             slivers: [
-              SliverToBoxAdapter(
-                child: const SizedBox(
+              const SliverToBoxAdapter(
+                child: SizedBox(
                   height: 40,
                 ),
               ),
-              SliverToBoxAdapter(child: FeaturedBooksListView()),
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(child: FeaturedBooksListView()),
+              const SliverToBoxAdapter(
                 child: SizedBox(
                   height: 50,
                 ),
               ),
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.only(left: kHorizontalPadding),
+                  padding: const EdgeInsets.only(left: kHorizontalPadding),
                   child: Text(
                     'Best Seller',
-                    style: AppStyles.styleSemiBold18,
+                    style: AppStyles.styleSemiBold18(context),
                   ),
                 ),
               ),
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                 child: SizedBox(
                   height: 20,
                 ),
               ),
-              BestSellerListView(),
-              SliverToBoxAdapter(
+              const BestSellerListView(),
+              const SliverToBoxAdapter(
                 child: SizedBox(
                   height: 20,
                 ),

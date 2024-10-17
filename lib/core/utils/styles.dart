@@ -2,10 +2,13 @@ import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
-  static const TextStyle styleRegular30 = TextStyle(
-    fontFamily: kGTSectra,
-    fontSize: 30,
-  );
+  static TextStyle styleRegular30(context) {
+    return TextStyle(
+      fontFamily: kGTSectra,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 30),
+    );
+  }
+
   static TextStyle styleRegular20(context) {
     return TextStyle(
       fontFamily: kGTSectra,
@@ -22,11 +25,13 @@ abstract class AppStyles {
     );
   }
 
-  static const TextStyle styleSemiBold18 = TextStyle(
-    fontFamily: kMontserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-  );
+  static TextStyle styleSemiBold18(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 18),
+      fontWeight: FontWeight.w600,
+    );
+  }
 
   static TextStyle styleBold20(context) {
     return TextStyle(
@@ -44,25 +49,33 @@ abstract class AppStyles {
     );
   }
 
-  static const TextStyle styleBold18 = TextStyle(
-    fontFamily: kMontserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.w700,
-    color: Colors.black,
-  );
-  static const TextStyle styleBold16 = TextStyle(
-    color: Colors.white,
-    fontFamily: kMontserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.w700,
-  );
+  static TextStyle styleBold18(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 18),
+      fontWeight: FontWeight.w700,
+      color: Colors.black,
+    );
+  }
 
-  static TextStyle styleMedium18 = TextStyle(
-    fontFamily: kMontserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-    color: Colors.white.withOpacity(.7),
-  );
+  static TextStyle styleBold16(context) {
+    return TextStyle(
+      color: Colors.white,
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleMedium18(context) {
+    return TextStyle(
+      fontFamily: kMontserrat,
+      fontSize: getResponsiveFontSize(context, baseFontSize: 18),
+      fontWeight: FontWeight.w500,
+      color: Colors.white.withOpacity(.7),
+    );
+  }
+
   static TextStyle styleMedium16(context) {
     return TextStyle(
       fontFamily: kMontserrat,
