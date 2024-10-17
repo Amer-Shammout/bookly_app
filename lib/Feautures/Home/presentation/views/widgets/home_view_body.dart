@@ -25,14 +25,12 @@ class HomeViewBody extends StatelessWidget {
         //   height: 20,
         // ),
         const Expanded(
-           
           child: CustomScrollView(
-            
             slivers: [
               SliverToBoxAdapter(
                 child: const SizedBox(
-                          height: 40,
-                        ),
+                  height: 40,
+                ),
               ),
               SliverToBoxAdapter(child: FeaturedBooksListView()),
               SliverToBoxAdapter(
@@ -55,6 +53,11 @@ class HomeViewBody extends StatelessWidget {
                 ),
               ),
               BestSellerListView(),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 20,
+                ),
+              ),
             ],
           ),
         ),

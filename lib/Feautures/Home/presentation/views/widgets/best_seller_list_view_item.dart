@@ -1,5 +1,5 @@
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_cover.dart';
-import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_info.dart';
+import 'package:bookly_app/Feautures/Home/presentation/views/widgets/best_seller_book_info.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +11,11 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
-      child: const Padding(
-        padding: EdgeInsets.only(
+      child: Padding(
+        padding: const EdgeInsets.only(
           left: kHorizontalPadding,
           right: kHorizontalPadding,
           bottom: 20,
@@ -23,13 +23,18 @@ class BestSellerListViewItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            BookCover(),
-            Flexible(
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * .15,
+              child: const BookCover(
+                radius: 8,
+              ),
+            ),
+            const Flexible(
               child: SizedBox(
                 width: 30,
               ),
             ),
-            Expanded(
+            const Expanded(
               flex: 4,
               child: BookInfo(),
             ),

@@ -27,6 +27,7 @@ abstract class AppStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+
   static TextStyle styleBold20(context) {
     return TextStyle(
       fontFamily: kMontserrat,
@@ -50,6 +51,7 @@ abstract class AppStyles {
     color: Colors.black,
   );
   static const TextStyle styleBold16 = TextStyle(
+    color: Colors.white,
     fontFamily: kMontserrat,
     fontSize: 16,
     fontWeight: FontWeight.w700,

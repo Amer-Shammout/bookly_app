@@ -11,8 +11,9 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(Assets.imagesStar,width: getResponsiveFontSize(context, baseFontSize: 12),height: getResponsiveFontSize(context, baseFontSize: 12),),
+        SvgPicture.asset(Assets.imagesStar,),
         const SizedBox(
           width: 5,
         ),
