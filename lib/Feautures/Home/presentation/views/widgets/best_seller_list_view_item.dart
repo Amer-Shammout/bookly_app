@@ -1,34 +1,40 @@
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_cover.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_info.dart';
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
-        left: kHorizontalPadding,
-        right: kHorizontalPadding,
-        bottom: 20
-
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          BookCover(),
-          Flexible(
-            child: SizedBox(
-              width: 30,
+    return GestureDetector(
+      onTap: (){
+        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+      },
+      child: const Padding(
+        padding: EdgeInsets.only(
+          left: kHorizontalPadding,
+          right: kHorizontalPadding,
+          bottom: 20,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            BookCover(),
+            Flexible(
+              child: SizedBox(
+                width: 30,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 4,
-            child: BookInfo(),
-          ),
-        ],
+            Expanded(
+              flex: 4,
+              child: BookInfo(),
+            ),
+          ],
+        ),
       ),
     );
   }
