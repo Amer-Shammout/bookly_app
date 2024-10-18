@@ -25,7 +25,6 @@ class HomeViewBody extends StatelessWidget {
             GoRouter.of(context).push(AppRouter.kSearchView);
           },
         ),
-      
         Expanded(
           child: CustomScrollView(
             slivers: [

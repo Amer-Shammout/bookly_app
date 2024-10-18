@@ -13,7 +13,9 @@ class BookRating extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(Assets.imagesStar,),
+        SvgPicture.asset(
+          Assets.imagesStar,
+        ),
         const SizedBox(
           width: 5,
         ),

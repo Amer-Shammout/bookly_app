@@ -8,7 +8,7 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: 10,
-      itemBuilder: (context,index){
+      itemBuilder: (context, index) {
         return BestSellerListViewItem();
       },
     );

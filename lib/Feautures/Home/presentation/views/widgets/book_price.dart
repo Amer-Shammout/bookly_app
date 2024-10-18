@@ -22,4 +22,3 @@ class BookPrice extends StatelessWidget {
     );
   }
 }
-
