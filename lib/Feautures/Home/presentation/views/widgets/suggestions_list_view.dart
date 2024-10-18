@@ -16,14 +16,18 @@ class SuggestionsListView extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(
-              left: index == 0 ? kHorizontalPadding : 0,
-              right: index == 9 ? kHorizontalPadding : 10,
-            ),
+            padding: formatPadding(index),
             child: const BookCover(radius: 8),
           );
         },
       ),
     );
+  }
+
+  EdgeInsets formatPadding(int index) {
+    return EdgeInsets.only(
+            left: index == 0 ? kHorizontalPadding : 0,
+            right: index == 9 ? kHorizontalPadding : 10,
+          );
   }
 }

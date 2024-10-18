@@ -14,14 +14,18 @@ class FeaturedBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(
-              left: index == 0 ? kHorizontalPadding : 0,
-              right: index == 3 ? kHorizontalPadding : 15,
-            ),
+            padding: formatPadding(index),
             child: const FeaturedListViewItem(),
           );
         },
       ),
     );
+  }
+
+  EdgeInsets formatPadding(int index) {
+    return EdgeInsets.only(
+            left: index == 0 ? kHorizontalPadding : 0,
+            right: index == 3 ? kHorizontalPadding : 15,
+          );
   }
 }
