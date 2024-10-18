@@ -26,8 +26,8 @@ class SuggestionsListView extends StatelessWidget {
 
   EdgeInsets formatPadding(int index) {
     return EdgeInsets.only(
-            left: index == 0 ? kHorizontalPadding : 0,
-            right: index == 9 ? kHorizontalPadding : 10,
-          );
+      left: index == 0 ? kHorizontalPadding : 0,
+      right: index == 9 ? kHorizontalPadding : 10,
+    );
   }
 }

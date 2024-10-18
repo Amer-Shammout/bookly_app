@@ -24,8 +24,8 @@ class FeaturedBooksListView extends StatelessWidget {
 
   EdgeInsets formatPadding(int index) {
     return EdgeInsets.only(
-            left: index == 0 ? kHorizontalPadding : 0,
-            right: index == 3 ? kHorizontalPadding : 15,
-          );
+      left: index == 0 ? kHorizontalPadding : 0,
+      right: index == 3 ? kHorizontalPadding : 15,
+    );
   }
 }
