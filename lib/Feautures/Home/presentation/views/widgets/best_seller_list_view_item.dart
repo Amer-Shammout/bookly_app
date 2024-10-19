@@ -36,7 +36,7 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
             const Expanded(
               flex: 4,
-              child: BookInfo(),
+              child: BestSellerBookInfo(),
             ),
           ],
         ),
