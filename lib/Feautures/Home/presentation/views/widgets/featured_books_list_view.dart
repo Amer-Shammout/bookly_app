@@ -24,7 +24,8 @@ class FeaturedBooksListView extends StatelessWidget {
                   padding: formatPadding(index),
                   child: FeaturedListViewItem(
                     imageUrl:
-                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            '',
                   ),
                 );
               },

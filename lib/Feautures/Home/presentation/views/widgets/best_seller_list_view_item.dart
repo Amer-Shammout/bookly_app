@@ -29,7 +29,7 @@ class BestSellerListViewItem extends StatelessWidget {
             SizedBox(
               height: MediaQuery.sizeOf(context).height * .15,
               child:  BookCover(
-                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
                 radius: 8,
               ),
             ),

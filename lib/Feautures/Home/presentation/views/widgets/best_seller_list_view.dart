@@ -28,7 +28,7 @@ class BestSellerListView extends StatelessWidget {
             ),
           );
         } else {
-          return const SliverToBoxAdapter(
+          return const SliverFillRemaining(
             child: CustomLoadingIndicator(),
           );
         }
