@@ -1,3 +1,4 @@
+import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_cover.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/books_action.dart';
@@ -5,52 +6,52 @@ import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class BookDetails extends StatelessWidget {
-  const BookDetails.BookDetailsSection({super.key});
+class BookDetailsSection extends StatelessWidget {
+  const BookDetailsSection({super.key, required this.bookModel});
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: MediaQuery.sizeOf(context).height * .3,
-          child: const Center(
-            child: BookCover(
-              imageUrl: 'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
-              radius: 20,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      child: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * .3,
+            child:  Center(
+              child: BookCover(
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
+                radius: 20,
+              ),
             ),
           ),
-        ),
-        const SizedBox(
-          height: 45,
-        ),
-        Text(
-          'The Jungle Book',
-          style: AppStyles.styleRegular30(context),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          'Rudyard Kipling',
-          style: AppStyles.styleMedium18(context),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        const BookRating(averageRating: '4',ratingCount: 10,),
-        const SizedBox(
-          height: 35,
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: kHorizontalPadding,
+          const SizedBox(
+            height: 45,
           ),
-          child: BooksAction(),
-        ),
-      ],
+          Text(
+            bookModel.volumeInfo.title,
+            style: AppStyles.styleRegular30(context),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            bookModel.volumeInfo.authors.first,
+            style: AppStyles.styleMedium18(context),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+           BookRating(averageRating: bookModel.volumeInfo.averageRating ?? '0',ratingCount: bookModel.volumeInfo.ratingCount ?? 0,),
+          const SizedBox(
+            height: 35,
+          ),
+          BooksAction(),
+        ],
+      ),
     );
   }
 }

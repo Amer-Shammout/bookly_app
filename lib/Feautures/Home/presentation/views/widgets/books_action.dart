@@ -20,7 +20,7 @@ class BooksAction extends StatelessWidget {
                 15,
               ),
             ),
-            text: '19.99 €',
+            text: 'Free',
             textStyle: AppStyles.styleBold18(context),
           ),
         ),
@@ -37,7 +37,7 @@ class BooksAction extends StatelessWidget {
                 15,
               ),
             ),
-            text: 'Free Preview',
+            text: 'Preview',
             textStyle: AppStyles.styleBold16(context),
           ),
         )

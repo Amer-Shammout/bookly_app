@@ -15,7 +15,10 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView,extra: bookModel);
+        GoRouter.of(context).push(
+          AppRouter.kBookDetailsView,
+          extra: bookModel,
+        );
       },
       child: Padding(
         padding: const EdgeInsets.only(
@@ -28,7 +31,7 @@ class BestSellerListViewItem extends StatelessWidget {
           children: [
             SizedBox(
               height: MediaQuery.sizeOf(context).height * .15,
-              child:  BookCover(
+              child: BookCover(
                 imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
                 radius: 8,
               ),
@@ -40,7 +43,9 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
             Expanded(
               flex: 4,
-              child: BestSellerBookInfo(bookModel: bookModel,),
+              child: BestSellerBookInfo(
+                bookModel: bookModel,
+              ),
             ),
           ],
         ),
