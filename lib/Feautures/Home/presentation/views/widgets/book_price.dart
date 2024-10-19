@@ -6,18 +6,20 @@ class BookPrice extends StatelessWidget {
     super.key,
   });
 
+  // final double price;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "19.99 ",
+          "Free",
           style: AppStyles.styleBold20(context),
         ),
-        Text(
-          "€",
-          style: AppStyles.styleBold15(context),
-        ),
+        // Text(
+        //   "€",
+        //   style: AppStyles.styleBold15(context),
+        // ),
       ],
     );
   }

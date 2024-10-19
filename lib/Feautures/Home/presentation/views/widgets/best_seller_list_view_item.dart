@@ -1,3 +1,4 @@
+import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_cover.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/best_seller_book_info.dart';
 import 'package:bookly_app/constants.dart';
@@ -6,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+  const BestSellerListViewItem({super.key, required this.bookModel});
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +28,8 @@ class BestSellerListViewItem extends StatelessWidget {
           children: [
             SizedBox(
               height: MediaQuery.sizeOf(context).height * .15,
-              child: const BookCover(
-                imageUrl: 'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+              child:  BookCover(
+                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
                 radius: 8,
               ),
             ),
@@ -35,9 +38,9 @@ class BestSellerListViewItem extends StatelessWidget {
                 width: 30,
               ),
             ),
-            const Expanded(
+            Expanded(
               flex: 4,
-              child: BestSellerBookInfo(),
+              child: BestSellerBookInfo(bookModel: bookModel,),
             ),
           ],
         ),

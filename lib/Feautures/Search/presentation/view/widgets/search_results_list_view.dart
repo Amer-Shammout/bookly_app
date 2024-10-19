@@ -9,7 +9,8 @@ class SearchResultsListView extends StatelessWidget {
     return SliverList.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
-        return BestSellerListViewItem();
+        return Text('text');
+        // BestSellerListViewItem(bookModel: ,);
       },
     );
   }

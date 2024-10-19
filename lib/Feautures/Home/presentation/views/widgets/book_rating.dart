@@ -5,8 +5,11 @@ import 'package:flutter_svg/svg.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
-    super.key,
+    super.key, required this.averageRating, required this.ratingCount,
   });
+
+  final String averageRating;
+  final int ratingCount;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +23,14 @@ class BookRating extends StatelessWidget {
           width: 5,
         ),
         Text(
-          '4.8',
+          averageRating,
           style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
           width: 5,
         ),
         Text(
-          '(2390)',
+          '($ratingCount)',
           style: AppStyles.styleRegular14(context),
         )
       ],

@@ -14,6 +14,7 @@ class BookModel extends Equatable {
   final SaleInfo? saleInfo;
   final AccessInfo? accessInfo;
   final SearchInfo? searchInfo;
+  
 
   const BookModel({
     this.kind,

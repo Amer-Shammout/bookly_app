@@ -1,3 +1,4 @@
+import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_price.dart';
 import 'package:bookly_app/Feautures/Home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -6,7 +7,10 @@ import 'package:flutter/material.dart';
 class BestSellerBookInfo extends StatelessWidget {
   const BestSellerBookInfo({
     super.key,
+    required this.bookModel,
   });
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class BestSellerBookInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Harry Potter and the Goblet of Fire",
+          bookModel.volumeInfo.title,
           style: AppStyles.styleRegular20(context),
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
@@ -23,17 +27,20 @@ class BestSellerBookInfo extends StatelessWidget {
           height: 3,
         ),
         Text(
-          "J.K. Rowling",
+          bookModel.volumeInfo.authors.first,
           style: AppStyles.styleMedium14(context),
         ),
         const SizedBox(
           height: 3,
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            BookPrice(),
-            BookRating(),
+            const BookPrice(),
+            BookRating(
+              ratingCount: bookModel.volumeInfo.ratingCount ?? 0,
+              averageRating: bookModel.volumeInfo.averageRating ?? '0',
+            ),
           ],
         ),
       ],

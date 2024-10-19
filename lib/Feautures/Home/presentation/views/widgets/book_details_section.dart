@@ -40,7 +40,7 @@ class BookDetails extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        const BookRating(),
+        const BookRating(averageRating: '4',ratingCount: 10,),
         const SizedBox(
           height: 35,
         ),
