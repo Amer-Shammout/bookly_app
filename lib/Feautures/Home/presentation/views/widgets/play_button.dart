@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class PlayButton extends StatelessWidget {
@@ -10,25 +10,35 @@ class PlayButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withOpacity(.7),
-              blurRadius: 30,
-              offset: const Offset(2, 7))
-        ],
-      ),
-      child: CircleAvatar(
-        backgroundColor: Colors.white.withOpacity(.44),
-        radius: getResponsiveFontSize(context, baseFontSize: 20),
-        child: IconButton(
-          icon: const Icon(
-            size: 20,
-            Icons.play_arrow,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+        child: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: kPrimaryColor.withOpacity(.05),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(.1),
+                blurRadius: 30,
+                offset: const Offset(2, 7),
+              ),
+            ],
+            color: Colors.white.withOpacity(.1),
+            shape: BoxShape.circle,
           ),
-          onPressed: () {},
-          padding: EdgeInsets.zero,
+          child: IconButton(
+            icon: const Icon(
+              size: 20,
+              Icons.play_arrow,
+            ),
+            onPressed: () {},
+            padding: EdgeInsets.zero,
+          ),
         ),
       ),
     );

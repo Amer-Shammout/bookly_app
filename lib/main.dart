@@ -23,7 +23,7 @@ class BooklyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => FeaturedBooksCubit(
             getIt.get<HomeRepoImpl>(),
-          ),
+          )..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(
@@ -35,9 +35,10 @@ class BooklyApp extends StatelessWidget {
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            useMaterial3: true,
-            scaffoldBackgroundColor: kPrimaryColor,
-            brightness: Brightness.dark),
+          useMaterial3: true,
+          scaffoldBackgroundColor: kPrimaryColor,
+          brightness: Brightness.dark,
+        ),
       ),
     );
   }

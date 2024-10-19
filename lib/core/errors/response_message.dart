@@ -18,7 +18,7 @@ class ResponseMessage {
   static const String cacheError = AppStrings.strCacheError;
   static const String noInternetConnection = AppStrings.strNoInternetError;
   static const String defaultError = AppStrings.strDefaultError;
-  static const String connectionError = AppStrings.strDefaultError;
+  static const String connectionError = AppStrings.strNoInternetError;
   static const String unknownError = AppStrings.strUnknownError;
   static const String badCertificate = AppStrings.strBadCertificateError;
 }

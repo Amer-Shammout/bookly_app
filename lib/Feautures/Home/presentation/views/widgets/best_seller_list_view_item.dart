@@ -26,6 +26,7 @@ class BestSellerListViewItem extends StatelessWidget {
             SizedBox(
               height: MediaQuery.sizeOf(context).height * .15,
               child: const BookCover(
+                imageUrl: 'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
                 radius: 8,
               ),
             ),

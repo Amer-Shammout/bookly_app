@@ -16,6 +16,7 @@ class BookDetails extends StatelessWidget {
           height: MediaQuery.sizeOf(context).height * .3,
           child: const Center(
             child: BookCover(
+              imageUrl: 'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
               radius: 20,
             ),
           ),

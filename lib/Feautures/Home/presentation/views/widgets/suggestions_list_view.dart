@@ -17,7 +17,10 @@ class SuggestionsListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: formatPadding(index),
-            child: const BookCover(radius: 8),
+            child: const BookCover(
+              imageUrl: 'http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+              radius: 8,
+              ),
           );
         },
       ),
