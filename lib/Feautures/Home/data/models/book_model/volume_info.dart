@@ -58,7 +58,7 @@ class VolumeInfo extends Equatable {
             : json['averageRating'].toString() as String?,
         ratingCount: json['ratingsCount'] as int?,
         title: json['title'] as String,
-        authors: (json['authors'] as List<dynamic>).cast<String>(),
+        authors: (json['authors'] == null ? ['Unknown'] : json['authors'] as List<dynamic>).cast<String>(),
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
         description: json['description'] as String?,

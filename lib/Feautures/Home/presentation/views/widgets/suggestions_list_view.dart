@@ -22,7 +22,7 @@ class SuggestionsListView extends StatelessWidget {
             height: 110,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: formatPadding(index),

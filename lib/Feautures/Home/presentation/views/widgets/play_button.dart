@@ -1,12 +1,17 @@
 import 'dart:ui';
 
+import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/functions/lunch_custom_url.dart';
 import 'package:flutter/material.dart';
 
 class PlayButton extends StatelessWidget {
   const PlayButton({
     super.key,
+    required this.bookModel,
   });
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +41,13 @@ class PlayButton extends StatelessWidget {
               size: 20,
               Icons.play_arrow,
             ),
-            onPressed: () {},
+            onPressed: () async {
+              await launchCustomUrl(
+                context: context,
+                isAvailable: bookModel.volumeInfo.previewLink != null,
+                url: bookModel.volumeInfo.previewLink ?? '',
+              );
+            },
             padding: EdgeInsets.zero,
           ),
         ),
