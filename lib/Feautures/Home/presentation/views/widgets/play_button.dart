@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/functions/lunch_custom_url.dart';
 import 'package:flutter/material.dart';

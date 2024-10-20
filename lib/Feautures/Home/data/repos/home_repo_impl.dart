@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:bookly_app/Feautures/Home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:bookly_app/Feautures/Home/data/repos/home_repo.dart';
 import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/core/utils/api_service.dart';
@@ -61,12 +61,12 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchSimilarBooks({required String category}) async {
     try {
-      Map<String, dynamic> data = await _apiService.get(
+      Map<String, dynamic>? data = await _apiService.get(
         endPoint:
             'volumes?Filtering=free-ebooks&q=subject:$category&Sorting=relevance',
       );
-      List<BookModel> books = [];
-      for (var item in data['items']) {
+      List<BookModel>? books = [];
+      for (var item in data['items'] ?? []) {
         books.add(
           BookModel.fromJson(item),
         );
