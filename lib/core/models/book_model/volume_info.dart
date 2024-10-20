@@ -6,7 +6,7 @@ import 'panelization_summary.dart';
 import 'reading_modes.dart';
 
 class VolumeInfo extends Equatable {
-  final String title;
+  final String? title;
   final List<String> authors;
   final String? publisher;
   final String? publishedDate;
@@ -57,7 +57,7 @@ class VolumeInfo extends Equatable {
             ? null
             : json['averageRating'].toString() as String?,
         ratingCount: json['ratingsCount'] as int?,
-        title: json['title'] as String,
+        title: json['title'] == null ? 'Unknown' : json['title'] as String?,
         authors: (json['authors'] == null ? ['Unknown'] : json['authors'] as List<dynamic>).cast<String>(),
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,

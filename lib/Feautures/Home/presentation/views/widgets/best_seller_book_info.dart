@@ -18,7 +18,7 @@ class BestSellerBookInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          bookModel.volumeInfo.title,
+          bookModel.volumeInfo.title!,
           style: AppStyles.styleRegular20(context),
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
